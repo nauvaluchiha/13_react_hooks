@@ -1,11 +1,8 @@
-import { useFetch } from "@/hooks/useFetch";
-import { useEffect, useId, useState } from "react";
 import ProductForm from "@/components/ProductForm";
 import TableProduct from "@/components/ProductTable";
 import Footer from "@/components/Footer";
 import GenerateNumber from "@/components/GenerateNumber";
 import Article from "@/components/Article";
-import { randomUUID } from "crypto";
 
 interface ProductData {
   id: string;
@@ -16,72 +13,6 @@ interface ProductData {
   desc: string;
   price: number | string;
 }
-
-const dataProduct = [
-  {
-    id: "1",
-    name: "Product Name",
-    category: "Product Category",
-    image: "Product Image",
-    freshness: "Product Freshness",
-    desc: "Additional Desc",
-    price: "$ 700",
-  },
-  {
-    id: "2",
-    name: "Product Name",
-    category: "Product Category",
-    image: "Product Image",
-    freshness: "Product Freshness",
-    desc: "Additional Desc",
-    price: "$ 600",
-  },
-  {
-    id: "3",
-    name: "Product Name",
-    category: "Product Category",
-    image: "Product Image",
-    freshness: "Product Freshness",
-    desc: "Additional Desc",
-    price: "$ 500",
-  },
-  {
-    id: "4",
-    name: "Product Name",
-    category: "Product Category",
-    image: "Product Image",
-    freshness: "Product Freshness",
-    desc: "Additional Desc",
-    price: "$ 400",
-  },
-  {
-    id: "5",
-    name: "Product Name",
-    category: "Product Category",
-    image: "Product Image",
-    freshness: "Product Freshness",
-    desc: "Additional Desc",
-    price: "$ 300",
-  },
-  {
-    id: "6",
-    name: "Product Name",
-    category: "Product Category",
-    image: "Product Image",
-    freshness: "Product Freshness",
-    desc: "Additional Desc",
-    price: "$ 200",
-  },
-  {
-    id: "7",
-    name: "Product Name",
-    category: "Product Category",
-    image: "Product Image",
-    freshness: "Product Freshness",
-    desc: "Additional Desc",
-    price: "$ 100",
-  },
-];
 
 export const CreateProduct = () => {
   // const data = useFetch("/v1/98c2bfc1-0f1e-4ab7-946d-b9ebd4bd416f");
