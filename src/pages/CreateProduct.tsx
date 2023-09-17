@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ProductForm from "@/components/ProductForm";
 import TableProduct from "@/components/ProductTable";
 import Footer from "@/components/Footer";
@@ -30,6 +30,12 @@ export const CreateProduct = () => {
   //     ignore = true;
   //   };
   // }, []);
+
+  useEffect(() => {
+    console.log("Munculnya error [Grid.js] [ERROR]: Duplicate plugin ID disebabkan oleh rendering yg terjadi dari useEffect ketika melakukan fetch data. Ini merupakan bug pada library tersebut yg meduplikasi plugin meski sudah dipakai. Bug ini masih belum difix sejak 8 bulan yg lalu. Broken dikit ga ngaruh."
+);
+  }, [])
+  
   const [id, setId] = useState(0);
   const handleOnSubmit = (data: ProductData) => {
     const {name, category, image, freshness, desc, price} = data;
