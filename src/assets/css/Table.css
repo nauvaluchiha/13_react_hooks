@@ -1,0 +1,10 @@
+table tr td:last-child {
+  /* Atur gaya CSS untuk kolom terakhir di setiap baris */
+  background-color: aqua;
+}
+
+/* Memilih elemen terakhir dalam tabel */
+table tr:last-child {
+  /* Atur gaya CSS untuk baris terakhir dalam tabel */
+  background-color: aquamarine;
+}
