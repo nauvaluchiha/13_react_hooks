@@ -83,10 +83,10 @@ const ProductTable: React.FC<Product> = ({ productData, handleDelete }) => {
         <Grid
           data={data}
           columns={productTitle}
-          search={true}
+{/*           search={true}
           pagination={{
             enabled: true,
-            limit: 20,
+            limit: 20, */}
           }}
           // className="table"
         />
