@@ -52,8 +52,9 @@ const ProductTable: React.FC<Product> = ({ productData, handleDelete }) => {
     setTimeout(() => {
       const button = document.querySelectorAll("button");
       button.forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        handleDelete(e.target.id);
+      btn.addEventListener("click", (e: MouseEvent) => {
+        const targetId: string | null = e.target ? (e.target as HTMLElement).id : null;
+        handleDelete(targetId!);
       });
     });
     }, 500);
