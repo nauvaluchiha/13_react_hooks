@@ -31,7 +31,7 @@ const productTitle = [
 ];
 
 const ProductTable: React.FC<Product> = ({ productData, handleDelete }) => {
-  const [data, setData] = useState<ProductData[]>([]);
+  const [data, setData] = useState<unknown>([]);
 
   useEffect(() => {
     const dataa = productData.map((item) => {
